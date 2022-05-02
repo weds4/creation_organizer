@@ -1,12 +1,12 @@
-/.venv
+/.venv/
 
-/.mypy_cache
+/.mypy_cache/
 
-/.vscode
+/.vscode/
 
-/__pycache__
+/__pycache__/
 
-/dist
+/dist/
 
 creation_organizer.json
 
