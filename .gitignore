@@ -10,4 +10,8 @@
 
 creation_organizer.json
 
-"to make ts.txt"
+to_make_ts.txt
+
+/interface/__pycache__/
+
+/logic/__pycache__/
