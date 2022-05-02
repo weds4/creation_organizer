@@ -1,0 +1,13 @@
+/.venv
+
+/.mypy_cache
+
+/.vscode
+
+/__pycache__
+
+/dist
+
+creation_organizer.json
+
+"to make ts.txt"
