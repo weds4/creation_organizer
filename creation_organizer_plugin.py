@@ -1,9 +1,16 @@
 from typing import List
 
 import mobase
-from PyQt6.QtGui import QIcon
-from PyQt6.QtWidgets import QApplication
-import PyQt6.QtWidgets as qtw
+try:
+    from PyQt6.QtGui import QIcon
+    from PyQt6.QtWidgets import QApplication
+    import PyQt6.QtWidgets as qtw
+    ICON = qtw.QStyle.StandardPixmap.SP_DesktopIcon
+except ModuleNotFoundError:
+    from PyQt5.QtGui import QIcon
+    from PyQt5.QtWidgets import QApplication
+    import PyQt5.QtWidgets as qtw
+    ICON = qtw.QStyle.SP_DesktopIcon
 
 from .logic.co_constants import PLUGIN_NAME, AUTHOR, DESCRIPTION, FAILS
 from .interface.co_dialog import CreationOrganizerDialog
@@ -83,7 +90,7 @@ class CreationOrganizerPlugin(mobase.IPluginTool):
             self.dialog.post_refresh()
 
     def icon(self) -> QIcon:
-        return QApplication.style().standardIcon(﻿qtw.QStyle.StandardPixmap.SP_DesktopIcon)
+        return QApplication.style().standardIcon(ICON)
 
     def tooltip(self) -> str:
         return self.__tr(f"{PLUGIN_NAME}: {DESCRIPTION}")

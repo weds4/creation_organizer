@@ -1,12 +1,11 @@
 from json import load
 import winreg
 from pathlib import Path
-from time import sleep
 
-import PyQt6
-import PyQt6.QtWidgets as qtw
-import PyQt6.QtGui as qtg
-import PyQt6.QtCore as qtc
+try:
+    import PyQt6.QtWidgets as qtw
+except ModuleNotFoundError:
+    import PyQt5.QtWidgets as qtw
 
 import mobase
 from ..logic.co_constants import JSON_PATH, SUFFIXES, SKYRIM_SE, REG_PATH
